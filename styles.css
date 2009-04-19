@@ -1,0 +1,34 @@
+*{text-align:left;}
+
+h1{font-size:131%;}
+h2{font-size:116%;}
+h1,h2{font-weight:bold;}
+h1,h2,p{margin-bottom:15px;}
+
+strong{font-weight:bold;}
+em{font-style:italic;}
+
+#container{
+	width:70%;
+	margin:10px auto;
+}
+div.example{
+	padding:10px 0;
+	border-top:1px dotted black;
+}
+
+
+.hidden{display:none;}
+
+/* Nasty clearfix hacks */
+.clearfix {display:inline-block;} 
+/* Hide from IE Mac \*/ 
+.clearfix {display:block;} 
+/* End hide from IE Mac */ 
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}

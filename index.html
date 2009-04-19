@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="charlesmarshall" />	
+	
+	<link rel="icon" type="image/gif" href="/favicon.ico" />
+	<link rel="stylesheet" href="http://tinyjs.com/files/projects/jquery-image-zoom/resets.css" type="text/css" media="screen" charset="utf-8" /><link rel="stylesheet" href="http://tinyjs.com/files/projects/jquery-image-zoom/styles.css" type="text/css" media="screen" charset="utf-8" /><link rel="stylesheet" href="http://tinyjs.com/files/projects/jquery-image-zoom/zoom.css" type="text/css" media="screen" charset="utf-8" />
+	<script src="http://tinyjs.com/files/projects/jquery-image-zoom/jquery.1.2.6.js" type="text/javascript" charset="utf-8"></script><script src="http://tinyjs.com/files/projects/jquery-image-zoom/jquery.zoom.js" type="text/javascript" charset="utf-8"></script>	
+	
+	<title>jQuery Image Zoom</title>
+	
+</head>
+
+<body>
+	<body>
+	<div id="container">
+		<h1>jQuery Image Zoom</h1>		
+		<p>Working on a recent project I needed to be able to make a 'zoom' style effect. The easiest way I could think 
+			of to do this was a simple + and - zoom bar (just like google maps) over a background image.</p>
+		<p>This piece of jQuery inserts a nicely styled compliant ul with li's into the container specified (if it's not there already) and
+			sets some trigger events for the a tags.</p>
+		<p>Now when you click on the plus or minus the background image is switched out for a larger version (passed in to the declaration).</p>
+		<p>The more images you pass in the more bars appear in the zoom control.</p>
+		<p>To make it work you need to set up some css and pass in the 'target_div' parameter in to the js with an array on image paths; and thats it, everything else is worked out for you.</p>
+		
+		<div class="example clearfix">
+			<h2>Simple Image Zoom</h2>
+			<p>Here is a container with 4 images, nice and simple. In this case I have already entered the ul code, so the js won't insert it.</p>
+			<div id="zoom" class="zoom">
+				<ul class="zoom_control">
+					<li class="zoom_plus"><a class="plus" href="#"><span> </span></a></li>
+					<li class="zoom_4"><a rel="zoom_4" class="zoom_level" href="#"><span> </span></a></li>
+					<li class="zoom_3"><a rel="zoom_3" class="zoom_level" href="#"><span> </span></a></li>
+					<li class="zoom_2"><a rel="zoom_2" class="zoom_level" href="#"><span> </span></a></li>
+					<li class="zoom_1 current_zoom"><a rel="zoom_1" class="zoom_level" href="#"><span> </span></a></li>
+					<li class="zoom_minus"><a class="minus" href="#"><span> </span></a></li>
+				</ul>	
+			</div>
+			<!-- big pic at the top -->
+			<div id="main_internal" class="main_internal">			
+			</div>
+			<div class="clearfix">&nbsp;</div>
+		</div>
+		
+		
+		<div class="example clearfix">
+			<h2>Image Zoom With Custom Images</h2>
+			<p>Here is a container with only 2 images specified in the js. Note how the number of zoom levels change</p>
+			<div id="zoom_2" class="zoom">	
+			</div>
+			<!-- big pic at the top -->
+			<div id="main_internal_2" class="main_internal">			
+			</div>
+			<div class="clearfix">&nbsp;</div>
+		</div>
+
+		
+		
+		
+	</div>
+	
+	
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#zoom').zoom({target_div:"main_internal", zoom_images:new Array('http://tinyjs.com/files/projects/jquery-image-zoom/image_1.jpg', 'http://tinyjs.com/files/projects/jquery-image-zoom/image_2.jpg', 'http://tinyjs.com/files/projects/jquery-image-zoom/image_3.jpg', 'http://tinyjs.com/files/projects/jquery-image-zoom/image_4.jpg') });
+	$('#zoom_2').zoom({target_div:"main_internal_2", zoom_images:new Array('http://tinyjs.com/files/projects/jquery-image-zoom/internal-1.jpg', 'http://tinyjs.com/files/projects/jquery-image-zoom/internal-2.jpg')});	
+});
+</script>
+
+
+
+<!-- STATS -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-2549287-19");
+	pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+
+</body>
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-2549287-19");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>
+
+	

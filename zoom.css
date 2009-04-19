@@ -1,0 +1,52 @@
+.main_internal{
+	width:300px;
+	height:200px;
+	margin:0px;
+	overflow:hidden;
+	background:url('http://tinyjs.com/files/projects/jquery-image-zoom/image_1.jpg') no-repeat center center;
+	float:left;
+}
+#main_internal_2{
+	background-image:url('http://tinyjs.com/files/projects/jquery-image-zoom/internal-1.jpg');
+}
+/*zoom controls*/	
+.zoom{
+	position:absolute;
+	margin:5px;
+	display:block;
+	width:17px;
+}	
+	.zoom li{
+		padding:0;
+		margin:0;
+		width:17px;
+		height:9px;
+		list-style-type:none;			
+		background:url('http://tinyjs.com/files/projects/jquery-image-zoom/zoom-slider.gif') no-repeat center center;	
+		display:block;
+		/*ie - so it removes all gaps..*/
+		float:left; 
+		clear:both;		
+	}
+	.zoom li a{
+		height:9px;
+		font-size:77%;
+		padding:0;
+		line-height:0.5em;
+		margin:0;
+		display:block;
+		text-decoration:none;
+	}
+		.zoom li.zoom_plus, .zoom li.zoom_minus{height:17px;}
+		.zoom li.zoom_plus a,
+		.zoom li.zoom_minus a{
+			width:17px;
+			height:17px;
+			background:url('http://tinyjs.com/files/projects/jquery-image-zoom/zoom-plus.gif') no-repeat center center;
+		}
+		.zoom li.zoom_minus a{background-image:url('http://tinyjs.com/files/projects/jquery-image-zoom/zoom-minus.gif');}
+		.zoom li a, .zoom li a:hover{
+			display:block;
+			text-align:center;				
+		}
+		.zoom li.current_zoom a{background:url('http://tinyjs.com/files/projects/jquery-image-zoom/zoom-level.gif') no-repeat top left;}
